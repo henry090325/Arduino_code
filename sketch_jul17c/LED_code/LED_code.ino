@@ -1,3 +1,10 @@
+void LEDON(int pinNumber) {
+  digitalWrite(pinNumber, HIGH);
+  delay(1000);
+  digitalWrite(pinNumber, LOW); 
+  delay(1000);
+}
+
 void setup() {
   pinMode(7, OUTPUT);
   pinMode(8, OUTPUT);
@@ -5,16 +12,7 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(7, HIGH);
-  delay(1000);
-  digitalWrite(7, LOW);
-  delay(1000);
-  digitalWrite(8, HIGH);
-  delay(1000);
-  digitalWrite(8, LOW);
-  delay(1000);
-  digitalWrite(11, HIGH);
-  delay(1000);
-  digitalWrite(11, LOW);
-  delay(1000);
+  LEDON(7);
+  LEDON(8);
+  LEDON(11);
 }
